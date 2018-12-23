@@ -19,11 +19,6 @@ type user struct {
 	Gender   string
 }
 
-func feetToInches(feet int) (inches int) {
-	inches = feet * 12
-	return inches
-}
-
 func getAge(scanner *bufio.Scanner) float64 {
 	fmt.Println("What's your age?")
 	scanner.Scan()
@@ -37,7 +32,7 @@ func getWeight(scanner *bufio.Scanner) float64 {
 	return weight
 }
 func getHeight(scanner *bufio.Scanner) float64 {
-	fmt.Println("What's your height in pounds?")
+	fmt.Println("What's your height in inches?")
 	scanner.Scan()
 	height, _ := strconv.ParseFloat(scanner.Text(), 64)
 	return height
